@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/chat.css">
+    <title>Group Chat</title>
+</head>
+<body>
+<div th:text="${hai}"></div>
+<div class="container">
+<div class="row">
+	<div class="col-sm-8 chat">
+					<div class="card">
+						<div class="card-header msg_head">
+								<div class="user_info">
+								<span th:text="${text}"></span>
+									 <span id="username" th:text="${username}"></span>
+									  <a th:href="@{/logout}" class="out"><i class="fas fa-sign-out-alt"></i>Logout</a>
+								</div>
+						</div>
+						<div class="card-body msg_card_body">
+							
+							<div class="img_cont_msg">
+									<ul id="messageArea"></ul>
+									<!-- <span class="msg_time_send">8:55 AM, Today</span> -->
+								</div>
+								
+								<!-- <div class="img_cont_msg">
+								<span ><i class="fas fa-user-circle fa-3x"></i></span>
+								</div> -->
+						<div class="card-footer">
+						<form id="messageForm" name="messageForm">
+							<div class="input-group">
+								<input type="text"  id="message" class="form-control type_msg" placeholder="Type your message...">
+								<button type="submit" class="btn"><span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span></button>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script th:src="@{/js/main.js}"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/chat.css">
+    <title>Group Chat</title>
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+	<div class="col-sm-8 chat">
+					<div class="card">
+						<div class="card-header msg_head">
+								<div class="user_info">
+									<span>Smart Group</span>
+								</div>
+						</div>
+						<div class="card-body msg_card_body">
+							
+							<div class="d-flex justify-content-end mb-4">
+								<div class="msg_cotainer_send" th:text="${text}">
+									
+									<span class="msg_time_send">8:55 AM, Today</span>
+								</div>
+								
+								<div class="img_cont_msg">
+								<span ><i class="fas fa-user-circle fa-3x"></i></span>
+								</div>
+							</div>
+						<div class="card-footer">
+							<div class="input-group">
+								<textarea name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
+								<div class="input-group-append">
+									<span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
