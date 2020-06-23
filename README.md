@@ -1,2 +1,4 @@
-# springboot_training_group_chat
+# Group Chat
 
+
+Developed using Springboot and web socket
